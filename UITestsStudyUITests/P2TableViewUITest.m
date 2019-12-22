@@ -8,13 +8,13 @@
 
 #import <XCTest/XCTest.h>
 
-@interface GSTableViewUITest : XCTestCase
+@interface P2TableViewUITest : XCTestCase
 
 @property(nonatomic,strong)XCUIApplication *app;
 
 @end
 
-@implementation GSTableViewUITest
+@implementation P2TableViewUITest
 
 - (void)setUp {
     [super setUp];
@@ -47,9 +47,7 @@
     //tabeView
     XCUIElement *tableView = [_app.tables elementBoundByIndex:0];
     [tableView swipeUp];
-////    sleep(2);
-//    [tableView swipeDown];
-////    sleep(2);
+    [tableView swipeDown];
     [tableView swipeUp];
 
     //tableViewCell

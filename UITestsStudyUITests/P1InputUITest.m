@@ -8,13 +8,13 @@
 
 #import <XCTest/XCTest.h>
 
-@interface GSInputUITest : XCTestCase
+@interface P1InputUITest : XCTestCase
 
 @property(nonatomic,strong)XCUIApplication *app;
 
 @end
 
-@implementation GSInputUITest
+@implementation P1InputUITest
 
 - (void)setUp {
     [super setUp];

@@ -18,10 +18,10 @@
 		93427EED23AF910E00A139F9 /* PageViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427EE623AF910E00A139F9 /* PageViewController3.m */; };
 		93427EEE23AF910E00A139F9 /* SubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427EE723AF910E00A139F9 /* SubViewController.m */; };
 		93427EF723AF961600A139F9 /* UITestsStudyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427EF623AF961600A139F9 /* UITestsStudyUITests.m */; };
-		93427F0223AF974F00A139F9 /* GSInputUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427EFE23AF974F00A139F9 /* GSInputUITest.m */; };
-		93427F0323AF974F00A139F9 /* GSNavcUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427EFF23AF974F00A139F9 /* GSNavcUITest.m */; };
-		93427F0423AF974F00A139F9 /* GSGestureUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427F0023AF974F00A139F9 /* GSGestureUITest.m */; };
-		93427F0523AF974F00A139F9 /* GSTableViewUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427F0123AF974F00A139F9 /* GSTableViewUITest.m */; };
+		93427F0223AF974F00A139F9 /* P1InputUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427EFE23AF974F00A139F9 /* P1InputUITest.m */; };
+		93427F0323AF974F00A139F9 /* P3NavcUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427EFF23AF974F00A139F9 /* P3NavcUITest.m */; };
+		93427F0723AFA93600A139F9 /* P0GestureUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427F0623AFA93600A139F9 /* P0GestureUITest.m */; };
+		93427F0B23AFAA4500A139F9 /* P2TableViewUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427F0A23AFAA4500A139F9 /* P2TableViewUITest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,10 +57,10 @@
 		93427EF423AF961600A139F9 /* UITestsStudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITestsStudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93427EF623AF961600A139F9 /* UITestsStudyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITestsStudyUITests.m; sourceTree = "<group>"; };
 		93427EF823AF961600A139F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93427EFE23AF974F00A139F9 /* GSInputUITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSInputUITest.m; sourceTree = "<group>"; };
-		93427EFF23AF974F00A139F9 /* GSNavcUITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSNavcUITest.m; sourceTree = "<group>"; };
-		93427F0023AF974F00A139F9 /* GSGestureUITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGestureUITest.m; sourceTree = "<group>"; };
-		93427F0123AF974F00A139F9 /* GSTableViewUITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTableViewUITest.m; sourceTree = "<group>"; };
+		93427EFE23AF974F00A139F9 /* P1InputUITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P1InputUITest.m; sourceTree = "<group>"; };
+		93427EFF23AF974F00A139F9 /* P3NavcUITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P3NavcUITest.m; sourceTree = "<group>"; };
+		93427F0623AFA93600A139F9 /* P0GestureUITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P0GestureUITest.m; sourceTree = "<group>"; };
+		93427F0A23AFAA4500A139F9 /* P2TableViewUITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P2TableViewUITest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,10 +167,10 @@
 		93427EF523AF961600A139F9 /* UITestsStudyUITests */ = {
 			isa = PBXGroup;
 			children = (
-				93427F0023AF974F00A139F9 /* GSGestureUITest.m */,
-				93427EFE23AF974F00A139F9 /* GSInputUITest.m */,
-				93427F0123AF974F00A139F9 /* GSTableViewUITest.m */,
-				93427EFF23AF974F00A139F9 /* GSNavcUITest.m */,
+				93427F0623AFA93600A139F9 /* P0GestureUITest.m */,
+				93427EFE23AF974F00A139F9 /* P1InputUITest.m */,
+				93427F0A23AFAA4500A139F9 /* P2TableViewUITest.m */,
+				93427EFF23AF974F00A139F9 /* P3NavcUITest.m */,
 				93427EF623AF961600A139F9 /* UITestsStudyUITests.m */,
 				93427EF823AF961600A139F9 /* Info.plist */,
 			);
@@ -291,11 +291,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93427F0223AF974F00A139F9 /* GSInputUITest.m in Sources */,
-				93427F0523AF974F00A139F9 /* GSTableViewUITest.m in Sources */,
-				93427F0323AF974F00A139F9 /* GSNavcUITest.m in Sources */,
+				93427F0223AF974F00A139F9 /* P1InputUITest.m in Sources */,
+				93427F0323AF974F00A139F9 /* P3NavcUITest.m in Sources */,
+				93427F0B23AFAA4500A139F9 /* P2TableViewUITest.m in Sources */,
+				93427F0723AFA93600A139F9 /* P0GestureUITest.m in Sources */,
 				93427EF723AF961600A139F9 /* UITestsStudyUITests.m in Sources */,
-				93427F0423AF974F00A139F9 /* GSGestureUITest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
