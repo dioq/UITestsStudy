@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5FE89889259376ED0020059D /* gesture_code.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5FE89888259376ED0020059D /* gesture_code.jpg */; };
 		93427EC123AF906900A139F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427EC023AF906900A139F9 /* AppDelegate.m */; };
 		93427ECC23AF906A00A139F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93427ECB23AF906A00A139F9 /* Assets.xcassets */; };
 		93427ECF23AF906A00A139F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93427ECD23AF906A00A139F9 /* LaunchScreen.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5FE89888259376ED0020059D /* gesture_code.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gesture_code.jpg; sourceTree = "<group>"; };
 		93427EBC23AF906900A139F9 /* UITestsStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITestsStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93427EBF23AF906900A139F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		93427EC023AF906900A139F9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5FE898872593763B0020059D /* Illustration */ = {
+			isa = PBXGroup;
+			children = (
+				5FE89888259376ED0020059D /* gesture_code.jpg */,
+			);
+			path = Illustration;
+			sourceTree = "<group>";
+		};
 		93427EB323AF906900A139F9 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +177,7 @@
 		93427EF523AF961600A139F9 /* UITestsStudyUITests */ = {
 			isa = PBXGroup;
 			children = (
+				5FE898872593763B0020059D /* Illustration */,
 				93427F0623AFA93600A139F9 /* P0GestureUITest.m */,
 				93427EFE23AF974F00A139F9 /* P1InputUITest.m */,
 				93427F0A23AFAA4500A139F9 /* P2TableViewUITest.m */,
@@ -266,6 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FE89889259376ED0020059D /* gesture_code.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,7 +448,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2U94TLD4SJ;
+				DEVELOPMENT_TEAM = DZV6AT693V;
 				INFOPLIST_FILE = UITestsStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -453,7 +465,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2U94TLD4SJ;
+				DEVELOPMENT_TEAM = DZV6AT693V;
 				INFOPLIST_FILE = UITestsStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
