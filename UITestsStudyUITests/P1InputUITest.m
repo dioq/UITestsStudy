@@ -20,11 +20,11 @@
     [super setUp];
     
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    _app = [[XCUIApplication alloc]init];
     
     // In UI tests it is usually best to stop immediately when a failure occurs.
     self.continueAfterFailure = NO;
     // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-    _app = [[XCUIApplication alloc]init];
     [_app launch];
     
     // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
@@ -46,7 +46,19 @@
     [page1 tap];
 
     /*
-      如果控件是 UILabel 、UITextFiled 或者 UIButton 等可以设置 text 的控件,那么其 identifier 就是 text。其实不管控件是否可以设置 text，都是可以通过 accessibilityIdentifier 设置其 identifier 。
+      如果控件是 UILabel、UITextFiled、 UITextView、 UIButton 等可以设置 text 的控件,那么其 identifier 就是 text。其实不管控件是否可以设置 text，都是可以通过 accessibilityIdentifier 设置其 identifier 。
+     
+     获取 UITextFiled                                  使用 _app.textFields
+     获取 UITextField (secureTextEntry = YES 的密码形态) 使用 _app.secureTextFields
+     获取 UITextView                                   使用 _app.textViews
+     获取 UISearchTextField                            使用 _app.searchFields
+     获取 UIButton (可点击控件)                          使用 _app.buttons
+     获取 UITableView                                  使用 _app.tables
+     获取 UIScrollView                                 使用 _app.scrollViews
+     获取 UISteper                                     使用 _app.steppers
+     获取 KeyBoard                                     使用 _app.keyboards
+     .....
+     
      **/
     
     //获取 UITextField
