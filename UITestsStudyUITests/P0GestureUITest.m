@@ -20,7 +20,11 @@
     [super setUp];
     
     // Put setup code here. This method is called before the invocation of each test method in the class.
-    _app = [[XCUIApplication alloc]init];
+//    _app = [[XCUIApplication alloc]init];
+    
+    // 待测试的 app bundleID, 可以测试其他的app
+    NSString *bundleID = @"Dio.UITestsStudy";//@"com.tencet.xin001";
+    _app = [[XCUIApplication alloc] initWithBundleIdentifier:bundleID];
     
     // In UI tests it is usually best to stop immediately when a failure occurs.
     self.continueAfterFailure = NO;

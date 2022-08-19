@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AA56A3B28AF7E3D00940DEF /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA56A3A28AF7E3D00940DEF /* test.png */; };
 		5FE89889259376ED0020059D /* gesture_code.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5FE89888259376ED0020059D /* gesture_code.jpg */; };
 		93427EC123AF906900A139F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427EC023AF906900A139F9 /* AppDelegate.m */; };
 		93427ECC23AF906A00A139F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93427ECB23AF906A00A139F9 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3AA56A3A28AF7E3D00940DEF /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		5FE89888259376ED0020059D /* gesture_code.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gesture_code.jpg; sourceTree = "<group>"; };
 		93427EBC23AF906900A139F9 /* UITestsStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITestsStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93427EBF23AF906900A139F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -83,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AA56A3528AF7ADE00940DEF /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				3AA56A3A28AF7E3D00940DEF /* test.png */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
 		5FE898872593763B0020059D /* Illustration */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +122,7 @@
 		93427EBE23AF906900A139F9 /* UITestsStudy */ = {
 			isa = PBXGroup;
 			children = (
+				3AA56A3528AF7ADE00940DEF /* resource */,
 				93427EDB23AF910E00A139F9 /* page0 */,
 				93427EE123AF910E00A139F9 /* page1 */,
 				93427EDE23AF910E00A139F9 /* page2 */,
@@ -233,19 +244,21 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1130;
-				ORGANIZATIONNAME = Geek;
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					93427EBB23AF906900A139F9 = {
 						CreatedOnToolsVersion = 11.3;
+						ProvisioningStyle = Automatic;
 					};
 					93427EF323AF961600A139F9 = {
 						CreatedOnToolsVersion = 11.3;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 93427EBB23AF906900A139F9;
 					};
 				};
 			};
 			buildConfigurationList = 93427EB723AF906900A139F9 /* Build configuration list for PBXProject "UITestsStudy" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -270,6 +283,7 @@
 			files = (
 				93427ECF23AF906A00A139F9 /* LaunchScreen.storyboard in Resources */,
 				93427ECC23AF906A00A139F9 /* Assets.xcassets in Resources */,
+				3AA56A3B28AF7E3D00940DEF /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,10 +464,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38D3676P2T;
 				INFOPLIST_FILE = UITestsStudy/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Dio.UITestsStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -467,10 +478,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38D3676P2T;
 				INFOPLIST_FILE = UITestsStudy/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Dio.UITestsStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -484,11 +492,7 @@
 				DEVELOPMENT_TEAM = 38D3676P2T;
 				INFOPLIST_FILE = UITestsStudyUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Dio.UITestsStudyUITests;
 				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -504,11 +508,7 @@
 				DEVELOPMENT_TEAM = 38D3676P2T;
 				INFOPLIST_FILE = UITestsStudyUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Dio.UITestsStudyUITests;
 				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
