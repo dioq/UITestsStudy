@@ -10,6 +10,9 @@
 
 @interface PageViewController0 ()
 
+@property(nonatomic,strong)UILabel *show;
+@property(nonatomic,strong)NSMutableString *showPointStr;
+
 @end
 
 @implementation PageViewController0
@@ -17,6 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.show = [[UILabel alloc]init];
+    [self.view addSubview:self.show];
+    self.show.frame =CGRectMake(0, 30, self.view.frame.size.width, 100);
+    self.show.numberOfLines = 10;
+//    [self.show sizeToFit];
     
     UILabel *tapLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, 100, 345, 30)];
     tapLabel.backgroundColor = [UIColor redColor];
@@ -24,7 +32,7 @@
     tapLabel.text = @"单击";
     [self.view addSubview:tapLabel];
     tapLabel.userInteractionEnabled = YES;
-
+    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
     [tapLabel addGestureRecognizer:tap];
     
@@ -47,7 +55,7 @@
     longLabel.text = @"长按";
     [self.view addSubview:longLabel];
     longLabel.userInteractionEnabled = YES;
-
+    
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressAction:)];
     longPress.minimumPressDuration = 1.0;
     [longLabel addGestureRecognizer:longPress];
@@ -83,20 +91,59 @@
     [button setBackgroundColor:[UIColor purpleColor]];
     [self.view addSubview:button];
     [button addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self setSlider];
+}
+
+-(void)setSlider {
+    //初始化方法
+    UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(0, 460, self.view.frame.size.width, 30)];
+    [self.view addSubview:slider];
+    
+    //指定附加到滑块断点的值,最小值表示滑块的前端,最大值表示滑块的尾端
+    slider.maximumValue = 100;
+    slider.minimumValue = 0;
+    
+    //设置滑块的初始值,该值必须位于最大值和最小值之间
+    slider.value = 50;
+    //设置滑块滑动到最小值时的图像，如果空白，则不显示图像
+//    slider.minimumValueImage = [UIImage imageNamed:@"tab_mine_50"];
+    //设置滑块滑动到最大值时的图像，如果空白，则不显示图像
+//    slider.maximumValueImage = [UIImage imageNamed:@"tab_team_50"];
+    //设置最小值前端滑杆的颜色
+    slider.minimumTrackTintColor = [UIColor yellowColor];
+    //    设置最大值右端的滑杆的颜色
+    slider.maximumTrackTintColor = [UIColor greenColor];
+    //设置滑块值的更改是否是连续事件,该值默认为YES
+    [slider setContinuous:NO];
+    
+    //添加触发事件
+    [slider addTarget:self action:@selector(sliderValurChanged:) forControlEvents:(UIControlEventValueChanged)];
+}
+
+// 获取滑块数值
+- (void)sliderValurChanged:(UISlider*)sender {
+    NSString *value = [NSString stringWithFormat:@"%f",sender.value];
+    NSLog(@"%@",value);
+    [self showAlertWithTitle:value];
 }
 
 - (void)tapAction:(UITapGestureRecognizer *)sender{
     [self showAlertWithTitle:@"单击"];
 }
+
 - (void)doubleTapAction:(UITapGestureRecognizer *)sender{
     [self showAlertWithTitle:@"双击"];
 }
+
 - (void)longPressAction:(UILongPressGestureRecognizer *)sender{
     [self showAlertWithTitle:@"长按"];
 }
+
 - (void)swipeAction:(UISwipeGestureRecognizer *)sender{
     [self showAlertWithTitle:@"轻扫"];
 }
+
 -(void)click:(UIButton *)sender {
     [self showAlertWithTitle:@"按钮点击"];
 }
@@ -106,6 +153,30 @@
     UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
     [alert addAction:action];
     [self presentViewController:alert animated:YES completion:nil];
+}
+
+//滑动开始事件
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    NSLog(@"开始了");
+    UITouch *touch = [touches anyObject];
+    CGPoint point = [touch locationInView:self.view];//获得初始的接触点
+    //以字符的形式输出触摸点
+    self.showPointStr = [[NSMutableString alloc] init];
+    NSString *p = [NSString stringWithFormat:@"触摸点的坐标: (%f,%f)", point.x, point.y];
+    [self.showPointStr appendString:p];
+    [self.show setText:self.showPointStr];
+    NSLog(@"%@", p);
+}
+
+//滑动结束处理事件
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [touches anyObject];
+    CGPoint point = [touch locationInView:self.view];  //获得滑动后最后接触屏幕的点
+    NSString *p = [NSString stringWithFormat:@"结束点的坐标: (%f,%f)", point.x, point.y];
+    [self.showPointStr appendString:@"\n"];
+    [self.showPointStr appendString:p];
+    [self.show setText:self.showPointStr];
+    NSLog(@"%@", p);
 }
 
 @end

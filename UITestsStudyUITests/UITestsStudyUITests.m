@@ -23,7 +23,7 @@
     // In UI tests it is usually best to stop immediately when a failure occurs.
     self.continueAfterFailure = NO;
     
-    [_app launch];
+//    [_app launch];
     // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     
 }
@@ -36,16 +36,16 @@
     // UI tests must launch the application that they test.
     
     //获取 UITabBarController 的 Item
-    XCUIElement *tabbar = _app.tabBars.allElementsBoundByIndex[0];
-    XCUIElementQuery *tabbarItems = [tabbar childrenMatchingType:XCUIElementTypeButton];
-    XCUIElement *page0 = [tabbarItems elementBoundByIndex:0];
-    XCUIElement *page1 = [tabbarItems elementBoundByIndex:1];
-    XCUIElement *page2 = [tabbarItems elementBoundByIndex:2];
-    XCUIElement *page3 = [tabbarItems elementBoundByIndex:3];
-    [page1 tap];
-    [page2 tap];
-    [page3 tap];
-    [page0 tap];
+//    XCUIElement *tabbar = _app.tabBars.allElementsBoundByIndex[0];
+//    XCUIElementQuery *tabbarItems = [tabbar childrenMatchingType:XCUIElementTypeButton];
+//    XCUIElement *page0 = [tabbarItems elementBoundByIndex:0];
+//    XCUIElement *page1 = [tabbarItems elementBoundByIndex:1];
+//    XCUIElement *page2 = [tabbarItems elementBoundByIndex:2];
+//    XCUIElement *page3 = [tabbarItems elementBoundByIndex:3];
+//    [page1 tap];
+//    [page2 tap];
+//    [page3 tap];
+//    [page0 tap];
     
     NSLog(@"GS: touchBars%@",_app.touchBars.allElementsBoundByAccessibilityElement);
     NSLog(@"GS: groups%@",_app.groups.allElementsBoundByAccessibilityElement);
