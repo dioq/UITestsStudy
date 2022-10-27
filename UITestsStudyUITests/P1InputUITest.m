@@ -20,7 +20,7 @@
     [super setUp];
     
     // Put setup code here. This method is called before the invocation of each test method in the class.
-//    _app = [[XCUIApplication alloc]init];
+    _app = [[XCUIApplication alloc]init];
     
     // In UI tests it is usually best to stop immediately when a failure occurs.
     self.continueAfterFailure = NO;
@@ -65,6 +65,7 @@
     XCUIElement *nameText = [_app.textFields elementMatchingType:XCUIElementTypeTextField identifier:@"name"];
     [nameText tap];
     [nameText typeText:@"admin"];
+    [nameText typeText:@""];
     
     //UITextField 的密码形态
     XCUIElement *passWordText = _app.secureTextFields[@"passWord"];
@@ -130,6 +131,15 @@
     if (kbSwitch.exists) {
         [kbSwitch pressForDuration:2];
     }
+}
+
+// 删除输入文字的功能
+-(void)testTF {
+    XCUIElement *nameText = [_app.textFields elementMatchingType:XCUIElementTypeTextField identifier:@"name"];
+    [nameText tap];
+    [nameText typeText:@"admin22"];
+
+    [self.app.keys[@"delete"] pressForDuration:3];
 }
 
 @end

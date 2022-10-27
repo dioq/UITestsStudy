@@ -20,7 +20,7 @@
     [super setUp];
     
     // Put setup code here. This method is called before the invocation of each test method in the class.
-//    _app = [[XCUIApplication alloc]init];
+    //    _app = [[XCUIApplication alloc]init];
     
     // 待测试的 app bundleID, 可以测试其他的app
     NSString *bundleID = @"cn.jobs8.UITestsStudy";//@"com.tencent.xin";
@@ -29,7 +29,7 @@
     // In UI tests it is usually best to stop immediately when a failure occurs.
     self.continueAfterFailure = NO;
     // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-//    [_app launch];
+    //    [_app launch];
     
     // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
 }
@@ -48,21 +48,21 @@
  - (void)waitForExpectationsWithTimeout:(NSTimeInterval)timeout handler:(nullable XCWaitCompletionHandler)handler;
  */
 - (void)testWait {
-  XCTestExpectation *exp = [self expectationWithDescription:@"超时"];
-  NSOperationQueue *queue = [[NSOperationQueue alloc]init];
-  [queue addOperationWithBlock:^{
-//    double revenue = 1500;
-//    double tax = [self.revenueBL calculate:revenue];
-    sleep(4);
-//    XCTAssertEqual(tax, 45.0, @"用例2测试失败");
-    [exp fulfill];  // exp结束
-  }];
-  
-  [self waitForExpectationsWithTimeout:3 handler:^(NSError * _Nullable error) {
-    if (error) {
-      NSLog(@"Timeout Error: %@", error);
-    }
-  }];
+    XCTestExpectation *exp = [self expectationWithDescription:@"超时"];
+    NSOperationQueue *queue = [[NSOperationQueue alloc]init];
+    [queue addOperationWithBlock:^{
+        //    double revenue = 1500;
+        //    double tax = [self.revenueBL calculate:revenue];
+        sleep(4);
+        //    XCTAssertEqual(tax, 45.0, @"用例2测试失败");
+        [exp fulfill];  // exp结束
+    }];
+    
+    [self waitForExpectationsWithTimeout:3 handler:^(NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Timeout Error: %@", error);
+        }
+    }];
 }
 
 - (void)testExample {
@@ -81,7 +81,7 @@
     [_app.buttons[@"单击"] tap];
     //点击alert的确定action
     [_app.buttons[@"确定"] tap];
-
+    
     //获取 UILabel 的双击手势
     [_app.buttons[@"双击"] doubleTap];
     //点击alert的确定action
@@ -91,22 +91,22 @@
     [_app.buttons[@"长按"] pressForDuration:1.5];
     //点击alert的确定action
     [_app.buttons[@"确定"] tap];
-
+    
     //轻扫label
     XCUIElement *swiper = _app.staticTexts[@"swipeRight"];
     [swiper swipeRight];
-//    [swiper swipeLeft];
-//    [swiper swipeUp];
-//    [swiper swipeDown];
+    //    [swiper swipeLeft];
+    //    [swiper swipeUp];
+    //    [swiper swipeDown];
     //点击alert的确定action
     [_app.buttons[@"确定"] tap];
-
+    
     //scrollView滑动
     XCUIElement *scroller = [_app.scrollViews elementBoundByIndex:0];
     [scroller swipeLeft];
     [scroller swipeLeft];
     [scroller swipeRight];
-
+    
     //UIButton的点击手势
     XCUIElement *button = _app.buttons[@"按钮点击"];
     [button tap];
@@ -180,29 +180,25 @@
     [[coordinate coordinateWithOffset:CGVectorMake(point.x, point.y) ] pressForDuration:duration];
 }
 
+// 系统弹框
 -(void)testSysAlert {
-//    NSString *bundleID = @"com.tencent.xin";
-//    XCUIApplication *wx_app = [[XCUIApplication alloc] initWithBundleIdentifier:bundleID];
-//    [wx_app launch];
-//    [NSThread sleepForTimeInterval:5];
-    
     // 点击系统弹框
     // - Parameter index: 按钮的下标.
     // 下标是从左边开始算起, 0为起始下标.   就比如通知权限, 要同意的话, 就传入 1
     XCUIApplication *sys_app = [[XCUIApplication alloc] initWithBundleIdentifier:@"com.apple.springboard"];
     XCUIElement *sureBtn = sys_app.buttons[@"不允许"];
-//    XCUIElement *sureBtn = [sys_app.alerts.firstMatch.buttons elementBoundByIndex:1];
+    //    XCUIElement *sureBtn = [sys_app.alerts.firstMatch.buttons elementBoundByIndex:1];
     if (sureBtn.exists && sureBtn != nil) {
         [sureBtn tap];
     }
-//    XCUIElementQuery *sys1 = [sys_app.alerts.firstMatch childrenMatchingType:XCUIElementTypeButton];
-//    XCUIElement *sysBtn = [sys1 elementMatchingType:XCUIElementTypeButton identifier:@"NotificationShortLookView"];
-//    XCUIElement *sysBtn = sys_app.buttons[@"允许"];
-//    XCUIElement *sysBtn = sys_app.windows.otherElements.alerts.otherElements.otherElements.otherElements.scrollViews.otherElements.otherElements.otherElements.buttons[@"允许"];
-//    if (sysBtn.exists) {
-//        [sysBtn pressForDuration:1];
-//    }
-//    [self customTapElementApp:wx_app Point:CGPointMake(250, 383) pressDuration:0.5];
+    //    XCUIElementQuery *sys1 = [sys_app.alerts.firstMatch childrenMatchingType:XCUIElementTypeButton];
+    //    XCUIElement *sysBtn = [sys1 elementMatchingType:XCUIElementTypeButton identifier:@"NotificationShortLookView"];
+    //    XCUIElement *sysBtn = sys_app.buttons[@"允许"];
+    //    XCUIElement *sysBtn = sys_app.windows.otherElements.alerts.otherElements.otherElements.otherElements.scrollViews.otherElements.otherElements.otherElements.buttons[@"允许"];
+    //    if (sysBtn.exists) {
+    //        [sysBtn pressForDuration:1];
+    //    }
+    //    [self customTapElementApp:wx_app Point:CGPointMake(250, 383) pressDuration:0.5];
 }
 
 @end
