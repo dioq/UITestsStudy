@@ -16,6 +16,9 @@
 
 @implementation P0GestureUITest
 
+/*
+ [UIView setAnimationsEnabled:NO]; //在待测试项目中禁止加载动画,可以让点自动化脚本更流畅。
+ **/
 - (void)setUp {
     [super setUp];
     
@@ -188,7 +191,7 @@
     XCUIApplication *sys_app = [[XCUIApplication alloc] initWithBundleIdentifier:@"com.apple.springboard"];
     XCUIElement *sureBtn = sys_app.buttons[@"不允许"];
     //    XCUIElement *sureBtn = [sys_app.alerts.firstMatch.buttons elementBoundByIndex:1];
-    if (sureBtn.exists && sureBtn != nil) {
+    if (sureBtn.exists) {
         [sureBtn tap];
     }
     //    XCUIElementQuery *sys1 = [sys_app.alerts.firstMatch childrenMatchingType:XCUIElementTypeButton];

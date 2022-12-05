@@ -24,6 +24,7 @@
     MyTabBarViewController *tabBarController = [MyTabBarViewController new];
     self.window.rootViewController = tabBarController;
     
+    [UIView setAnimationsEnabled:NO]; //禁掉动画,可以让点自动化脚本更流畅
     return YES;
 }
 
