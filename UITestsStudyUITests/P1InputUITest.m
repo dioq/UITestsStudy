@@ -64,6 +64,10 @@
     //获取 UITextField
     XCUIElement *nameText = [_app.textFields elementMatchingType:XCUIElementTypeTextField identifier:@"name"];
     [nameText tap];
+    NSString *placeholderValue = nameText.placeholderValue;// 获取输入框中的占位字符串
+    NSLog(@"placeholderValue:%@",placeholderValue);
+    NSString *nameTextValue = nameText.label;// 获取输入框中的字符
+    NSLog(@"nameText.label:%@",nameTextValue);
     [nameText typeText:@"admin"];
     [nameText typeText:@""];
     
@@ -75,7 +79,7 @@
     //获取 UITextView
     XCUIElement *tipText = _app.textViews[@"tipText"];
     [tipText tap];
-    [tipText typeText:@"提示：皮一下"];
+    [tipText typeText:@"提示：一个提示"];
 //    sleep(5);
     
     //获取 UIView
@@ -133,7 +137,7 @@
     }
 }
 
-// 删除输入文字的功能
+// 删除已输入文字的功能
 -(void)testTF {
     XCUIElement *nameText = [_app.textFields elementMatchingType:XCUIElementTypeTextField identifier:@"name"];
     [nameText tap];

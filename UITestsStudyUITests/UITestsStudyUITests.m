@@ -148,6 +148,36 @@
     [tablesQuery/*@START_MENU_TOKEN@*/.staticTexts[@"1:4"]/*[[".cells.staticTexts[@\"1:4\"]",".staticTexts[@\"1:4\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ tap];
 }
 
+-(void)testfindAllButton {
+    //  打印当前界面所有的 button
+    for (int i = 0; i < self.app.buttons.count; i++) {
+        NSLog(@"================== start %d ==================",i);
+        XCUIElement *btn = [self.app.buttons elementBoundByIndex:i];
+        NSLog(@"%@",btn.debugDescription);// 打印控件的一切信息
+        NSLog(@"================== end   %d ==================",i);
+    }
+}
+
+-(void)testfindAllTextFilds {
+    //  打印当前界面所有的 textField
+    for (int i = 0; i < self.app.textFields.count; i++) {
+        NSLog(@"================== start %d ==================",i);
+        XCUIElement *btn = [self.app.textFields elementBoundByIndex:i];
+        NSLog(@"%@",btn.debugDescription);// 打印控件的一切信息
+        NSLog(@"================== end   %d ==================",i);
+    }
+}
+
+-(void)testfindAllElement {
+    //  打印当前界面所有的 控件
+    for (int i = 0; i < self.app.otherElements.count; i++) {
+        NSLog(@"================== start %d ==================",i);
+        XCUIElement *element = [self.app.otherElements elementBoundByIndex:i];
+        NSLog(@"%@",element.debugDescription);// 打印控件的一切信息
+        NSLog(@"================== end   %d ==================",i);
+    }
+}
+
 - (void)testLaunchPerformance {
     if (@available(macOS 10.15, iOS 13.0, tvOS 13.0, *)) {
         // This measures how long it takes to launch your application.
