@@ -6,13 +6,13 @@
 //  Copyright © 2018年 gersces. All rights reserved.
 //
 
-#import "SubViewController.h"
+#import "NextViewController.h"
 
-@interface SubViewController ()
+@interface NextViewController ()
 
 @end
 
-@implementation SubViewController
+@implementation NextViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

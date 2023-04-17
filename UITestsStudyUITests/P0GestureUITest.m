@@ -43,11 +43,11 @@
 }
 
 /*
- //是否存在
+ 是否存在
  BOOL exists = tabLiveButton.exists;
- //是否可见
+ 是否可见
  BOOL hittable = tabLiveButton.hittable;
- //UITesting框架中提供的wait方法
+ UITesting框架中提供的wait方法
  - (void)waitForExpectationsWithTimeout:(NSTimeInterval)timeout handler:(nullable XCWaitCompletionHandler)handler;
  */
 - (void)testWait {
@@ -68,9 +68,8 @@
     }];
 }
 
-- (void)testExample {
-    // Use recording to get started writing UI tests.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+// 各种手势
+- (void)testMany {
     [self.app launch];//启动 app
     
     //点击tabbarItem，跳转到Page0界面
@@ -123,22 +122,6 @@
     !slider1.exists?:[slider1 adjustToNormalizedSliderPosition:0.5];
 }
 
-// 矢量拖动 --> 屏幕下滑打开通知
-- (void)testopenNotification{
-    //CGVectorMake(x, y) 其中 x,y取值范围(0,1) 表示所在父视图 x 轴 和 y轴 的比例
-    CGVector point1 = CGVectorMake(0.5, 0);
-    CGVector point2 = CGVectorMake(0.5, 0.7);
-    XCUICoordinate *coord1 = [self.app coordinateWithNormalizedOffset:point1];
-    XCUICoordinate *coord2 = [self.app coordinateWithNormalizedOffset:point2];
-    /*
-     沿着(point1,point2) 矢量方向拖动,整个过程持续 t 秒
-     point1 拖动起始位置
-     point2 拖动结束位置
-     **/
-    NSTimeInterval t = 0.1;
-    [coord1 pressForDuration:t thenDragToCoordinate:coord2];
-}
-
 // 矢量拖动 --> UISlider
 -(void)testDragSlider {
     CGVector point1 = CGVectorMake(0.5, 0);
@@ -160,28 +143,47 @@
     [coord1 pressForDuration:t thenDragToCoordinate:coord2];
 }
 
-// 矢量拖动 --> 在屏幕上拖动(
--(void)testDragScreen2 {
-    CGVector point1 = CGVectorMake(0.5, 0.8);
-    CGVector point2 = CGVectorMake(0.9, 0.8);
+// 矢量拖动 --> 屏幕上滑打开通知
+- (void)testopenNotification{
+    //CGVectorMake(x, y) 其中 x,y取值范围(0,1) 表示所在父视图 x 轴 和 y轴 的比例
+    CGVector point1 = CGVectorMake(0.5, 1);
+    CGVector point2 = CGVectorMake(0.5, 0.3);
     XCUICoordinate *coord1 = [self.app coordinateWithNormalizedOffset:point1];
     XCUICoordinate *coord2 = [self.app coordinateWithNormalizedOffset:point2];
+    /*
+     沿着(point1,point2) 矢量方向拖动,整个过程持续 t 秒
+     point1 拖动起始位置
+     point2 拖动结束位置
+     **/
     NSTimeInterval t = 0.1;
     [coord1 pressForDuration:t thenDragToCoordinate:coord2];
 }
 
-// 点击坐标点
--(void)testPoint {
-    CGPoint p = CGPointMake(100, 100);
-    [self customTapElementApp:self.app Point:p pressDuration:0.5];
+// 矢量拖动 --> 屏幕下滑锁定手机
+- (void)testClosePage{
+    //CGVectorMake(x, y) 其中 x,y取值范围(0,1) 表示所在父视图 x 轴 和 y轴 的比例
+    CGVector point1 = CGVectorMake(0.5, 0);
+    CGVector point2 = CGVectorMake(0.5, 0.7);
+    XCUICoordinate *coord1 = [self.app coordinateWithNormalizedOffset:point1];
+    XCUICoordinate *coord2 = [self.app coordinateWithNormalizedOffset:point2];
+    /*
+     沿着(point1,point2) 矢量方向拖动,整个过程持续 t 秒
+     point1 拖动起始位置
+     point2 拖动结束位置
+     **/
+    NSTimeInterval t = 0.1;
+    [coord1 pressForDuration:t thenDragToCoordinate:coord2];
 }
 
-- (void)customTapElementApp:(XCUIApplication *)app Point:(CGPoint)point pressDuration:(NSTimeInterval)duration{
-    //CGVectorMake(0.0, 0.0) screen origin
-    //dx: 0.0, dy: 0.0 - The "-10" means scroll 10 points down.
-    XCUICoordinate *coordinate1 = [app coordinateWithNormalizedOffset:CGVectorMake(0, 0)];//取从标系统(0,0)的矢量
-    XCUICoordinate *coordinate2 = [coordinate1 coordinateWithOffset:CGVectorMake(point.x, point.y)];//取 point点 相对(0,0) 的矢量
-    [coordinate2 pressForDuration:duration];
+// 获取页面返回按钮
+-(void)testBackupButton {
+    [_app.buttons[@"点击跳转"] tap];
+    
+    //获取导航栏的返回按钮
+    XCUIElement *navcBar = _app.navigationBars.allElementsBoundByIndex[0];
+    XCUIElementQuery *navcBarItems = [navcBar childrenMatchingType:XCUIElementTypeButton];
+    XCUIElement *backBtn = [navcBarItems elementBoundByIndex:0];
+    [backBtn tap];
 }
 
 // 系统弹框

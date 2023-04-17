@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3AA56A3B28AF7E3D00940DEF /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA56A3A28AF7E3D00940DEF /* test.png */; };
+		3AAEE89C29ED85B000E3EB9F /* P3TouchSimulate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEE89B29ED85B000E3EB9F /* P3TouchSimulate.m */; };
+		3AAEE8A229ED8A0400E3EB9F /* TouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEE8A029ED8A0400E3EB9F /* TouchViewController.m */; };
+		3AAEE8A329ED8A0400E3EB9F /* TouchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AAEE8A129ED8A0400E3EB9F /* TouchViewController.xib */; };
 		5FE89889259376ED0020059D /* gesture_code.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5FE89888259376ED0020059D /* gesture_code.jpg */; };
 		93427EC123AF906900A139F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427EC023AF906900A139F9 /* AppDelegate.m */; };
 		93427ECC23AF906A00A139F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93427ECB23AF906A00A139F9 /* Assets.xcassets */; };
@@ -17,11 +20,9 @@
 		93427EEA23AF910E00A139F9 /* PageViewController0.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427EDC23AF910E00A139F9 /* PageViewController0.m */; };
 		93427EEB23AF910E00A139F9 /* PageViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427EE023AF910E00A139F9 /* PageViewController2.m */; };
 		93427EEC23AF910E00A139F9 /* PageViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427EE323AF910E00A139F9 /* PageViewController1.m */; };
-		93427EED23AF910E00A139F9 /* PageViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427EE623AF910E00A139F9 /* PageViewController3.m */; };
-		93427EEE23AF910E00A139F9 /* SubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427EE723AF910E00A139F9 /* SubViewController.m */; };
+		93427EEE23AF910E00A139F9 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427EE723AF910E00A139F9 /* NextViewController.m */; };
 		93427EF723AF961600A139F9 /* UITestsStudyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427EF623AF961600A139F9 /* UITestsStudyUITests.m */; };
 		93427F0223AF974F00A139F9 /* P1InputUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427EFE23AF974F00A139F9 /* P1InputUITest.m */; };
-		93427F0323AF974F00A139F9 /* P3NavcUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427EFF23AF974F00A139F9 /* P3NavcUITest.m */; };
 		93427F0723AFA93600A139F9 /* P0GestureUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427F0623AFA93600A139F9 /* P0GestureUITest.m */; };
 		93427F0B23AFAA4500A139F9 /* P2TableViewUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = 93427F0A23AFAA4500A139F9 /* P2TableViewUITest.m */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,10 @@
 
 /* Begin PBXFileReference section */
 		3AA56A3A28AF7E3D00940DEF /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		3AAEE89B29ED85B000E3EB9F /* P3TouchSimulate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = P3TouchSimulate.m; sourceTree = "<group>"; };
+		3AAEE89F29ED8A0400E3EB9F /* TouchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchViewController.h; sourceTree = "<group>"; };
+		3AAEE8A029ED8A0400E3EB9F /* TouchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchViewController.m; sourceTree = "<group>"; };
+		3AAEE8A129ED8A0400E3EB9F /* TouchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TouchViewController.xib; sourceTree = "<group>"; };
 		5FE89888259376ED0020059D /* gesture_code.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gesture_code.jpg; sourceTree = "<group>"; };
 		93427EBC23AF906900A139F9 /* UITestsStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITestsStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93427EBF23AF906900A139F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,16 +58,13 @@
 		93427EE023AF910E00A139F9 /* PageViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController2.m; sourceTree = "<group>"; };
 		93427EE223AF910E00A139F9 /* PageViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController1.h; sourceTree = "<group>"; };
 		93427EE323AF910E00A139F9 /* PageViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController1.m; sourceTree = "<group>"; };
-		93427EE523AF910E00A139F9 /* SubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubViewController.h; sourceTree = "<group>"; };
-		93427EE623AF910E00A139F9 /* PageViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController3.m; sourceTree = "<group>"; };
-		93427EE723AF910E00A139F9 /* SubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubViewController.m; sourceTree = "<group>"; };
-		93427EE823AF910E00A139F9 /* PageViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController3.h; sourceTree = "<group>"; };
+		93427EE523AF910E00A139F9 /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
+		93427EE723AF910E00A139F9 /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 		93427EEF23AF93F000A139F9 /* MyTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabBarViewController.h; sourceTree = "<group>"; };
 		93427EF423AF961600A139F9 /* UITestsStudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITestsStudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93427EF623AF961600A139F9 /* UITestsStudyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITestsStudyUITests.m; sourceTree = "<group>"; };
 		93427EF823AF961600A139F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93427EFE23AF974F00A139F9 /* P1InputUITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P1InputUITest.m; sourceTree = "<group>"; };
-		93427EFF23AF974F00A139F9 /* P3NavcUITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P3NavcUITest.m; sourceTree = "<group>"; };
 		93427F0623AFA93600A139F9 /* P0GestureUITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P0GestureUITest.m; sourceTree = "<group>"; };
 		93427F0A23AFAA4500A139F9 /* P2TableViewUITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P2TableViewUITest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,9 +129,7 @@
 				93427EE123AF910E00A139F9 /* page1 */,
 				93427EDE23AF910E00A139F9 /* page2 */,
 				93427EE423AF910E00A139F9 /* page3 */,
-				93427ED823AF910E00A139F9 /* tabbar */,
-				93427EBF23AF906900A139F9 /* AppDelegate.h */,
-				93427EC023AF906900A139F9 /* AppDelegate.m */,
+				93427ED823AF910E00A139F9 /* navigation */,
 				93427ECB23AF906A00A139F9 /* Assets.xcassets */,
 				93427ECD23AF906A00A139F9 /* LaunchScreen.storyboard */,
 				93427ED023AF906A00A139F9 /* Info.plist */,
@@ -138,18 +138,22 @@
 			path = UITestsStudy;
 			sourceTree = "<group>";
 		};
-		93427ED823AF910E00A139F9 /* tabbar */ = {
+		93427ED823AF910E00A139F9 /* navigation */ = {
 			isa = PBXGroup;
 			children = (
+				93427EBF23AF906900A139F9 /* AppDelegate.h */,
+				93427EC023AF906900A139F9 /* AppDelegate.m */,
 				93427EEF23AF93F000A139F9 /* MyTabBarViewController.h */,
 				93427ED923AF910E00A139F9 /* MyTabBarViewController.m */,
 			);
-			path = tabbar;
+			path = navigation;
 			sourceTree = "<group>";
 		};
 		93427EDB23AF910E00A139F9 /* page0 */ = {
 			isa = PBXGroup;
 			children = (
+				93427EE523AF910E00A139F9 /* NextViewController.h */,
+				93427EE723AF910E00A139F9 /* NextViewController.m */,
 				93427EDD23AF910E00A139F9 /* PageViewController0.h */,
 				93427EDC23AF910E00A139F9 /* PageViewController0.m */,
 			);
@@ -177,10 +181,9 @@
 		93427EE423AF910E00A139F9 /* page3 */ = {
 			isa = PBXGroup;
 			children = (
-				93427EE523AF910E00A139F9 /* SubViewController.h */,
-				93427EE723AF910E00A139F9 /* SubViewController.m */,
-				93427EE823AF910E00A139F9 /* PageViewController3.h */,
-				93427EE623AF910E00A139F9 /* PageViewController3.m */,
+				3AAEE89F29ED8A0400E3EB9F /* TouchViewController.h */,
+				3AAEE8A029ED8A0400E3EB9F /* TouchViewController.m */,
+				3AAEE8A129ED8A0400E3EB9F /* TouchViewController.xib */,
 			);
 			path = page3;
 			sourceTree = "<group>";
@@ -192,7 +195,7 @@
 				93427F0623AFA93600A139F9 /* P0GestureUITest.m */,
 				93427EFE23AF974F00A139F9 /* P1InputUITest.m */,
 				93427F0A23AFAA4500A139F9 /* P2TableViewUITest.m */,
-				93427EFF23AF974F00A139F9 /* P3NavcUITest.m */,
+				3AAEE89B29ED85B000E3EB9F /* P3TouchSimulate.m */,
 				93427EF623AF961600A139F9 /* UITestsStudyUITests.m */,
 				93427EF823AF961600A139F9 /* Info.plist */,
 			);
@@ -283,6 +286,7 @@
 			files = (
 				93427ECF23AF906A00A139F9 /* LaunchScreen.storyboard in Resources */,
 				93427ECC23AF906A00A139F9 /* Assets.xcassets in Resources */,
+				3AAEE8A329ED8A0400E3EB9F /* TouchViewController.xib in Resources */,
 				3AA56A3B28AF7E3D00940DEF /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,10 +306,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AAEE8A229ED8A0400E3EB9F /* TouchViewController.m in Sources */,
 				93427EEA23AF910E00A139F9 /* PageViewController0.m in Sources */,
 				93427EEC23AF910E00A139F9 /* PageViewController1.m in Sources */,
-				93427EED23AF910E00A139F9 /* PageViewController3.m in Sources */,
-				93427EEE23AF910E00A139F9 /* SubViewController.m in Sources */,
+				93427EEE23AF910E00A139F9 /* NextViewController.m in Sources */,
 				93427EC123AF906900A139F9 /* AppDelegate.m in Sources */,
 				93427EE923AF910E00A139F9 /* MyTabBarViewController.m in Sources */,
 				93427ED223AF906A00A139F9 /* main.m in Sources */,
@@ -318,8 +322,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				93427F0223AF974F00A139F9 /* P1InputUITest.m in Sources */,
-				93427F0323AF974F00A139F9 /* P3NavcUITest.m in Sources */,
 				93427F0B23AFAA4500A139F9 /* P2TableViewUITest.m in Sources */,
+				3AAEE89C29ED85B000E3EB9F /* P3TouchSimulate.m in Sources */,
 				93427F0723AFA93600A139F9 /* P0GestureUITest.m in Sources */,
 				93427EF723AF961600A139F9 /* UITestsStudyUITests.m in Sources */,
 			);

@@ -7,11 +7,9 @@
 //
 
 #import "PageViewController0.h"
+#import "NextViewController.h"
 
 @interface PageViewController0 ()
-
-@property(nonatomic,strong)UILabel *show;
-@property(nonatomic,strong)NSMutableString *showPointStr;
 
 @end
 
@@ -19,12 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.show = [[UILabel alloc]init];
-    [self.view addSubview:self.show];
-    self.show.frame =CGRectMake(0, 30, self.view.frame.size.width, 100);
-    self.show.numberOfLines = 10;
-//    [self.show sizeToFit];
+    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"点击跳转" style:UIBarButtonItemStylePlain target:self action:@selector(jumpNextPage)];
+    self.navigationItem.rightBarButtonItem = rightBarButtonItem;
     
     UILabel *tapLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, 100, 345, 30)];
     tapLabel.backgroundColor = [UIColor redColor];
@@ -95,6 +89,13 @@
     [self setSlider];
 }
 
+-(void)jumpNextPage {
+    NextViewController *vc = [[NextViewController alloc]init];
+    vc.hidesBottomBarWhenPushed = YES;
+    vc.title = @"subPage";
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 -(void)setSlider {
     //初始化方法
     UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(0, 460, self.view.frame.size.width, 30)];
@@ -153,30 +154,6 @@
     UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
     [alert addAction:action];
     [self presentViewController:alert animated:YES completion:nil];
-}
-
-//滑动开始事件
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    NSLog(@"开始了");
-    UITouch *touch = [touches anyObject];
-    CGPoint point = [touch locationInView:self.view];//获得初始的接触点
-    //以字符的形式输出触摸点
-    self.showPointStr = [[NSMutableString alloc] init];
-    NSString *p = [NSString stringWithFormat:@"触摸点的坐标: (%f,%f)", point.x, point.y];
-    [self.showPointStr appendString:p];
-    [self.show setText:self.showPointStr];
-    NSLog(@"%@", p);
-}
-
-//滑动结束处理事件
--(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    UITouch *touch = [touches anyObject];
-    CGPoint point = [touch locationInView:self.view];  //获得滑动后最后接触屏幕的点
-    NSString *p = [NSString stringWithFormat:@"结束点的坐标: (%f,%f)", point.x, point.y];
-    [self.showPointStr appendString:@"\n"];
-    [self.showPointStr appendString:p];
-    [self.show setText:self.showPointStr];
-    NSLog(@"%@", p);
 }
 
 @end

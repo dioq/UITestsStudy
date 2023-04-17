@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SubViewController : UIViewController
+@interface NextViewController : UIViewController
 
 @end

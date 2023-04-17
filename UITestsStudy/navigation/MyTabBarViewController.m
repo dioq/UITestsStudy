@@ -10,7 +10,7 @@
 #import "PageViewController0.h"
 #import "PageViewController1.h"
 #import "PageViewController2.h"
-#import "PageViewController3.h"
+#import "TouchViewController.h"
 
 @interface MyTabBarViewController ()
 
@@ -25,11 +25,10 @@ static MyTabBarViewController *_tabbar = nil;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
     [self addChildVc:[[PageViewController0 alloc]init] title:@"Page0" image:@"tab_home_normal" selectedImage:@"tab_home_50"];
     [self addChildVc:[[PageViewController1 alloc]init] title:@"Page1" image:@"tab_c2c_normal" selectedImage:@"tab_c2c_50"];
     [self addChildVc:[[PageViewController2 alloc]init] title:@"Page2" image:@"tab_team_normal" selectedImage:@"tab_team_50"];
-    [self addChildVc:[[PageViewController3 alloc]init] title:@"Page3" image:@"tab_mine_normal" selectedImage:@"tab_mine_50"];
+    [self addChildVc:[[TouchViewController alloc]init] title:@"Page3" image:@"tab_mine_normal" selectedImage:@"tab_mine_50"];
     
 }
 
