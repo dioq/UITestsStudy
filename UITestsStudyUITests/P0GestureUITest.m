@@ -179,8 +179,9 @@
 - (void)customTapElementApp:(XCUIApplication *)app Point:(CGPoint)point pressDuration:(NSTimeInterval)duration{
     //CGVectorMake(0.0, 0.0) screen origin
     //dx: 0.0, dy: 0.0 - The "-10" means scroll 10 points down.
-    XCUICoordinate *coordinate = [app coordinateWithNormalizedOffset:CGVectorMake(0, 0)];
-    [[coordinate coordinateWithOffset:CGVectorMake(point.x, point.y) ] pressForDuration:duration];
+    XCUICoordinate *coordinate1 = [app coordinateWithNormalizedOffset:CGVectorMake(0, 0)];//取从标系统(0,0)的矢量
+    XCUICoordinate *coordinate2 = [coordinate1 coordinateWithOffset:CGVectorMake(point.x, point.y)];//取 point点 相对(0,0) 的矢量
+    [coordinate2 pressForDuration:duration];
 }
 
 // 系统弹框
