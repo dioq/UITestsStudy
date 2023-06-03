@@ -16,9 +16,7 @@
 
 @implementation P0GestureUITest
 
-/*
- [UIView setAnimationsEnabled:NO]; //在待测试项目中禁止加载动画,可以让点自动化脚本更流畅。
- **/
+
 - (void)setUp {
     [super setUp];
     
@@ -42,14 +40,6 @@
     [super tearDown];
 }
 
-/*
- 是否存在
- BOOL exists = tabLiveButton.exists;
- 是否可见
- BOOL hittable = tabLiveButton.hittable;
- UITesting框架中提供的wait方法
- - (void)waitForExpectationsWithTimeout:(NSTimeInterval)timeout handler:(nullable XCWaitCompletionHandler)handler;
- */
 - (void)testWait {
     XCTestExpectation *exp = [self expectationWithDescription:@"超时"];
     NSOperationQueue *queue = [[NSOperationQueue alloc]init];
@@ -69,7 +59,7 @@
 }
 
 // 各种手势
-- (void)testMany {
+- (void)testVariousElement {
     [self.app launch];//启动 app
     
     //点击tabbarItem，跳转到Page0界面
@@ -80,7 +70,9 @@
     
     
     //获取 UILabel 的单击手势
-    [_app.buttons[@"单击"] tap];
+    XCUIElementQuery *buttons = [self.app buttons];
+    XCUIElement *button_01 = [buttons elementMatchingType:XCUIElementTypeButton identifier:@"单击"];
+    [button_01 tap];
     //点击alert的确定action
     [_app.buttons[@"确定"] tap];
     
@@ -187,7 +179,7 @@
 }
 
 // 系统弹框
--(void)testSysAlert {
+-(void)testSystemAlert {
     // 点击系统弹框
     // - Parameter index: 按钮的下标.
     // 下标是从左边开始算起, 0为起始下标.   就比如通知权限, 要同意的话, 就传入 1

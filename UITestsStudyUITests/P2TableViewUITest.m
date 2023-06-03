@@ -40,7 +40,8 @@
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     
     //点击tabbarItem，跳转到Page2界面
-    XCUIElement *tabbar = _app.tabBars.allElementsBoundByIndex[0];
+    NSArray<XCUIElement *> *tabbars = [_app.tabBars allElementsBoundByIndex];
+    XCUIElement *tabbar = [tabbars objectAtIndex:0];
     XCUIElementQuery *tabbarItems = [tabbar childrenMatchingType:XCUIElementTypeButton];
     XCUIElement *page2 = [tabbarItems elementBoundByIndex:2];
     [page2 tap];

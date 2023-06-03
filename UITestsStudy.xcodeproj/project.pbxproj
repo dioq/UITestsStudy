@@ -39,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		3AA56A3A28AF7E3D00940DEF /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		3AA8A5022A2B2F80001223F1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3AAEE89B29ED85B000E3EB9F /* P3TouchSimulate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = P3TouchSimulate.m; sourceTree = "<group>"; };
 		3AAEE89F29ED8A0400E3EB9F /* TouchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchViewController.h; sourceTree = "<group>"; };
 		3AAEE8A029ED8A0400E3EB9F /* TouchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchViewController.m; sourceTree = "<group>"; };
@@ -198,6 +199,7 @@
 				3AAEE89B29ED85B000E3EB9F /* P3TouchSimulate.m */,
 				93427EF623AF961600A139F9 /* UITestsStudyUITests.m */,
 				93427EF823AF961600A139F9 /* Info.plist */,
+				3AA8A5022A2B2F80001223F1 /* README.md */,
 			);
 			path = UITestsStudyUITests;
 			sourceTree = "<group>";
@@ -468,7 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DZ4RUFAG9F;
+				DEVELOPMENT_TEAM = 5YBWG2X244;
 				INFOPLIST_FILE = UITestsStudy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -483,7 +485,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DZ4RUFAG9F;
+				DEVELOPMENT_TEAM = 5YBWG2X244;
 				INFOPLIST_FILE = UITestsStudy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -497,7 +499,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DZ4RUFAG9F;
+				DEVELOPMENT_TEAM = 5YBWG2X244;
 				INFOPLIST_FILE = UITestsStudyUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -516,7 +518,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DZ4RUFAG9F;
+				DEVELOPMENT_TEAM = 5YBWG2X244;
 				INFOPLIST_FILE = UITestsStudyUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

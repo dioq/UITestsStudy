@@ -20,12 +20,12 @@
     [super setUp];
     
     // Put setup code here. This method is called before the invocation of each test method in the class.
-    _app = [[XCUIApplication alloc]init];
+    self.app = [[XCUIApplication alloc] init];
     
     // In UI tests it is usually best to stop immediately when a failure occurs.
     self.continueAfterFailure = NO;
     // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-//    [_app launch];
+    //    [_app launch];
     
     // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
 }
@@ -44,9 +44,9 @@
     XCUIElementQuery *tabbarItems = [tabbar childrenMatchingType:XCUIElementTypeButton];
     XCUIElement *page1 = [tabbarItems elementBoundByIndex:1];
     [page1 tap];
-
+    
     /*
-      如果控件是 UILabel、UITextFiled、 UITextView、 UIButton 等可以设置 text 的控件,那么其 identifier 就是 text。其实不管控件是否可以设置 text，都是可以通过 accessibilityIdentifier 设置其 identifier 。
+     如果控件是 UILabel、UITextFiled、 UITextView、 UIButton 等可以设置 text 的控件,那么其 identifier 就是 text。其实不管控件是否可以设置 text，都是可以通过 accessibilityIdentifier 设置其 identifier 。
      
      获取 UITextFiled                                  使用 _app.textFields
      获取 UITextField (secureTextEntry = YES 的密码形态) 使用 _app.secureTextFields
@@ -57,8 +57,6 @@
      获取 UIScrollView                                 使用 _app.scrollViews
      获取 UISteper                                     使用 _app.steppers
      获取 KeyBoard                                     使用 _app.keyboards
-     .....
-     
      **/
     
     //获取 UITextField
@@ -80,7 +78,7 @@
     XCUIElement *tipText = _app.textViews[@"tipText"];
     [tipText tap];
     [tipText typeText:@"提示：一个提示"];
-//    sleep(5);
+    //    sleep(5);
     
     //获取 UIView
     XCUIElement *pageView = [_app.otherElements elementMatchingType:XCUIElementTypeOther identifier:@"pageView1"];
@@ -102,7 +100,6 @@
 }
 
 -(void)testAlert {
-    self.app = [[XCUIApplication alloc]init];
     [self.app launch];
     
     //点击tabbarItem，跳转到Page1界面
@@ -110,16 +107,16 @@
     XCUIElementQuery *tabbarItems = [tabbar childrenMatchingType:XCUIElementTypeButton];
     XCUIElement *page1 = [tabbarItems elementBoundByIndex:1];
     [page1 tap];
-
+    
     XCUIElement *btn1 = self.app.buttons[@"弹框"];
     if (btn1.exists) {
         [btn1 tap];
     }
     
-//    XCUIElement *btn2 = self.app.buttons[@"允许"];
-//    if (btn2.exists) {
-//        [btn2 tap];
-//    }
+    //    XCUIElement *btn2 = self.app.buttons[@"允许"];
+    //    if (btn2.exists) {
+    //        [btn2 tap];
+    //    }
     
     XCUIElement *alert = [self.app.alerts elementBoundByIndex:0];
     XCUIElement *btn = [alert.buttons elementBoundByIndex:0];
@@ -130,10 +127,17 @@
 
 // 键盘切换
 -(void)testKeybaord {
-    XCUIApplication *app = [[XCUIApplication alloc] init];
-    XCUIElement *kbSwitch = app.keyboards.buttons[@"Next keyboard"];
+    XCUIElement *kbSwitch = self.app.keyboards.buttons[@"Next keyboard"];
     if (kbSwitch.exists) {
         [kbSwitch pressForDuration:2];
+    }
+    NSLog(@"%@",self.app.debugDescription);
+    
+    XCUIElementQuery *all_btns1 = [self.app descendantsMatchingType:XCUIElementTypeStaticText];
+    XCUIElement *input1 = [all_btns1 elementMatchingType:XCUIElementTypeStaticText identifier:@"Emoji"];
+    if(input1.exists) {
+        NSLog(@"----------------- input1 was exists");
+        [input1 tap];
     }
 }
 
@@ -142,7 +146,7 @@
     XCUIElement *nameText = [_app.textFields elementMatchingType:XCUIElementTypeTextField identifier:@"name"];
     [nameText tap];
     [nameText typeText:@"admin22"];
-
+    
     [self.app.keys[@"delete"] pressForDuration:3];
 }
 
