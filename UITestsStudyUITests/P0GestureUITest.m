@@ -6,6 +6,10 @@
 //  Copyright © 2018年 gersces. All rights reserved.
 //
 
+/*
+ /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework
+ XCTest 依赖库路径
+ **/
 #import <XCTest/XCTest.h>
 
 @interface P0GestureUITest : XCTestCase
